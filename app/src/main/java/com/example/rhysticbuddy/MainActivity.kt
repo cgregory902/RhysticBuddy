@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         //FIXME: is it funnier to have the sounds able to overlap? Code must be changed if so
         //create new mediaplayer object at every buttonClick - just move player init into listener
+        //If new object created on every click memory leak possible: if overlapping sounds CLOSE RESOURCE!!
 
         //set listener to button
         buttonClick.setOnClickListener()
