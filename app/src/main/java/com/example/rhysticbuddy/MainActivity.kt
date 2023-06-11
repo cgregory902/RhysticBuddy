@@ -13,11 +13,16 @@ class MainActivity : AppCompatActivity() {
 
         //get reference to button
         val buttonClick = findViewById(R.id.button) as Button
+        //Initialize mediaplayer object
+        var player = MediaPlayer.create(applicationContext, R.raw.question_male)
+
+        //FIXME: is it funnier to have the sounds able to overlap? Code must be changed if so
+        //create new mediaplayer object at every buttonClick - just move player init into listener
+
         //set listener to button
         buttonClick.setOnClickListener()
         {
             //Play sound
-            var player = MediaPlayer.create(applicationContext, R.raw.question_male)
             player.start()
         }
     }
